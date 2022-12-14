@@ -4,6 +4,8 @@
 # 글쓴이
 ## 김영민 
 
-* email<kym75804047@gmail.com>
+* email
+    * <kym75804047@gmail.com>
 
-* instagram [Waiem._.art](https://www.instagram.com/waiem._.art/, "Insta Link")
+* instagram 
+    * [Waiem._.art](https://www.instagram.com/waiem._.art/, "Insta Link")
