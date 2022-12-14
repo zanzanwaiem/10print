@@ -1,7 +1,7 @@
 # 10print
 - 10print에 이것저것 실험한 것.
 
--
+- 우연에 의한 상상의 즐거움.
 
 # 글쓴이
 ## 김영민 
@@ -14,16 +14,18 @@
 
 * 좋아하는 것
     * 노래
-        * Fujii Kaze - 홍대병같아보일 수도 있는데, 뜨기 전부터 개좋아함
+        * Fujii Kaze - Jpop에 재즈피아노적 요소를 추가해 새로운 느낌을 주는 가수
             * matsuri
             * grace
             * garden
             * yasashisa
+            * NANNAN
 
         * Indigo la end - 잔잔하면서 색다른 노래를 들을 수 있는 인디밴드
             * omoikiri
             * natsuyo no magic
             * aoito
+            * aiirosukisa
 
         * back number - 찐따사랑얘기를 주로 다루는 발라드밴드 
             * kiiro
