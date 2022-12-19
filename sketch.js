@@ -1,29 +1,20 @@
-let w = 20;
-let posX, posY;
+let fire;
 
 function setup() {
-  createCanvas(400, 400);
-  posX = 0;
-  posY = 0;
-
-  
+  createCanvas(1000, 1000);
+  fire = new ParticleSystem(createVector(width / 2, height / 2));
 }
 
 function draw() {
-  background(220);
+  background(0);
 
-  for(j = 0; j < height/w; j++){
-    for(i = 0; i < width/w; i++){
-      fill(random(255), random(255), random(255));
-      rect(posX +w*i, posY+w*j, w);
-    }
-    if(posX>= width){
-      posX = 0;
-    }
+  blendMode(ADD);
+  fire.addParticle();
+  fire.run();
+}
+
+function keyReleased() {
+  if (key == 's' || key == 'S') {
+    saveCanvas('screenshot', 'png');
   }
-  if(posY >= height){
-    posY = 0;
-  }
-
-
 }
