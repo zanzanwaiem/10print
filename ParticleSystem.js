@@ -8,10 +8,10 @@ class ParticleSystem {
         this.particles.push(new Particle(this.origin));
     }
 
-    run(Force) {
+    run(love) {
         for (let i = this.particles.length - 1; i >= 0; i--) {
             let p = this.particles[i];
-            p.run(Force);
+            p.run(love);
 
             if (p.isDead()) {
                 this.particles.splice(i, 1);

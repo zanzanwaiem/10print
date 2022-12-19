@@ -1,18 +1,24 @@
 let fire;
+let lSlider, love;
 
 function setup() {
   createCanvas(1000, 1000);
   fire = new ParticleSystem(createVector(width / 2, height / 2));
+  lSlider = createSlider(0, 100, 0);
+  lSlider.position(20, 20);
+  textAlign(CENTER);
 }
 
 function draw() {
   background(0);
+  love = lSlider.value();
 
   for (i = 0; i < 10; i++) {
     blendMode(ADD);
     fire.addParticle();
-    fire.run();
+    fire.run(love);
   }
+    text('❤️', lSlider.x * 2 + lSlider.width, 35);
 }
 
 function keyReleased() {
