@@ -1,7 +1,11 @@
-# 10print
-- 10print에 이것저것 실험한 것.
+# Particle
+- ParticleSystem을 활용해 나의 성장을 표현한 것.
 
-- 우연에 의한 상상의 즐거움.
+- 좋아하거나 흥미로운 것을 발견했을 때 펑 터진다!
+
+- 설명 
+    - 슬라이드더를 90 이상 올릴 시 펑펑
+    - 좋아수치가 90퍼센트 이상인걸 발견했을 때 반짝이며 열정을 불태우는 나를 빗대어 표현했다. 
 
 # 글쓴이
 ## 김영민 
@@ -19,7 +23,7 @@
             * grace
             * garden
             * yasashisa
-            * NANNAN
+            * NAN-NAN
 
         * Indigo la end - 잔잔하면서 색다른 노래를 들을 수 있는 인디밴드
             * omoikiri
@@ -27,10 +31,18 @@
             * aoito
             * aiirosukisa
 
+        * BLU-SWING - 작업하면서 엉덩이도 흔들면서 듣기 좋은 노래다.
+            * karage
+            * fabulous
+            * sum
+            * rain
+            * flash
+
         * back number - 찐따사랑얘기를 주로 다루는 발라드밴드 
             * kiiro
             * takaneno hanakosan
             * happy end
+            * christmas song
 
         * the weeknd - 야무짐
             * out of time
