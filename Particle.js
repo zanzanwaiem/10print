@@ -1,17 +1,24 @@
 class Particle {
     constructor(position) {
-        this.acc = createVector(0, 0.05);
-        this.vel = createVector(random(-1, 1), random(-1, 1));
+        this.acc = createVector(0, 0);
+        this.vel = p5.Vector.random2D();
+        
+        this.randomwalk = createVector(random(-1, 1), random(-1, 1));
         this.pos = position.copy();
-        this.lifetime = 255;
+        this.lifetime = 1000;
         this.r = 10;
     }
 
-    run() {
+    run(Force) {
         this.update();
         this.display();
         // this.edge();
         this.bomb();
+        this.applyForce(Force);
+    }
+
+    applyForce(Force){
+        this.acc.add(Force);
     }
 
     // edge() {
@@ -39,14 +46,15 @@ class Particle {
     bomb() {
         if (mouseIsPressed) {
             this.bombF = p5.Vector.random2D();
-            this.bombF.mult(0.1);
+            this.bombF.mult(0.4);
             this.acc.add(this.bombF);
+            this.lifetime -= 4;
         }
     }
 
     update() {
         this.vel.add(this.acc);
-        this.vel.setMag(10);
+        this.vel.mult(this.randomwalk);
         this.pos.add(this.vel);
         this.lifetime -= 2;
         this.r -= 1;

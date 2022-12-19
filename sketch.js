@@ -8,9 +8,11 @@ function setup() {
 function draw() {
   background(0);
 
-  blendMode(ADD);
-  fire.addParticle();
-  fire.run();
+  for (i = 0; i < 10; i++) {
+    blendMode(ADD);
+    fire.addParticle();
+    fire.run();
+  }
 }
 
 function keyReleased() {
