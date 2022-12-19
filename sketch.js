@@ -19,4 +19,10 @@ function keyReleased() {
   if (key == 's' || key == 'S') {
     saveCanvas('screenshot', 'png');
   }
+
+  if (key == 'r' || key == 'R') {
+    blendMode(NORMAL);
+    background(0);
+    reset();
+  }
 }
