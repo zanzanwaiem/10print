@@ -3,14 +3,14 @@ class Particle {
         this.acc = createVector(0, 0);
         this.vel = p5.Vector.random2D();
         
-        this.randomwalk = createVector(random(-1, 1), random(-1, 1));
+        this.randomCross = createVector(random(-1, 1), random(-1, 1));
         this.pos = position.copy();
         this.lifetime = 1000;
         this.r = 10;
     }
 
     run(love) {
-        this.update();
+        this.update(love);
         this.display(love);
         this.edge();
         this.bomb(love);
@@ -52,9 +52,10 @@ class Particle {
         }
     }
 
-    update() {
+    update(love) {
+        this.acc.setMag(love / 100);
         this.vel.add(this.acc);
-        this.vel.mult(this.randomwalk);
+        this.vel.mult(this.randomCross);
         this.pos.add(this.vel);
         this.lifetime -= 2;
         this.r -= 1;
@@ -69,7 +70,7 @@ class Particle {
         if(love >= 90){
             fill(random(150,220), random(150, 220), random(150, 220), this.lifetime);
         } else {
-            fill(255, 150, 150, this.lifetime);
+            fill(random(255), random(150), random(150), this.lifetime);
         }
 
         ellipse(this.pos.x, this.pos.y, this.r);
