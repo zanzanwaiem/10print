@@ -2,7 +2,7 @@ let fire;
 let lSlider, love;
 let RB;
 let song, songPlay;
-let vol = 0.5;
+let vol = 0.25;
 
 function setup() {
   song = loadSound('The Dawn Coming.mp3');
