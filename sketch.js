@@ -1,14 +1,19 @@
 let fire;
 let lSlider, love;
 let RB;
+let song, songPlay;
 
 function setup() {
+  song = loadSound('The Dawn Coming.mp3');
+  songPlay = 0;
+
   RB = random(1);
   createCanvas(1000, 1000);
   BB();
   fire = new ParticleSystem(createVector(width / 2, height / 2));
   lSlider = createSlider(0, 100, 0);
   lSlider.position(1020, 20);
+  frameRate(10);
 }
 
 function draw() {
@@ -20,6 +25,14 @@ function draw() {
     
     fire.addParticle();
     fire.run(love, RB);
+  }
+
+  if(love >= 90 && songPlay == 0){
+    song.play();
+    songPlay = 1;
+  } else if (love < 90){
+    song.stop();
+    songPlay = 0;
   }
 }
 
@@ -40,7 +53,7 @@ function BB() {
   if(RB<0.25){
     background(random(15), random(30), random(15));
   } else if( RB < 0.50){
-    background(random(150, 200), random(100, 150), random(50));
+    background(random(150, 200), random(100, 150), random(40));
   } else if (RB < 0.75){
     background(random(15), random(30), random(15));
   } else if (RB <= 1) {
