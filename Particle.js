@@ -9,9 +9,9 @@ class Particle {
         this.r = 10;
     }
 
-    run(love) {
+    run(love, RB) {
         this.update(love);
-        this.display(love);
+        this.display(love, RB);
         this.edge();
         this.bomb(love);
     }
@@ -65,12 +65,12 @@ class Particle {
         }
     }
 
-    display(love) {
+    display(love, RB) {
         noStroke();
         if(love >= 90){
             fill(random(150,220), random(150, 220), random(150, 220), this.lifetime);
         } else {
-            fill(random(255), random(150), random(150), this.lifetime);
+            fillColor();
         }
 
         ellipse(this.pos.x, this.pos.y, this.r);
@@ -79,4 +79,17 @@ class Particle {
     isDead() {
         return this.lifetime < 0;
     }
+}
+
+function fillColor(){
+    if(RB<0.25){
+        fill(random(255), random(150), random(150), this.lifetime);
+      } else if( RB < 0.50){
+        fill(random(20), random(20), random(250), this.lifetime);
+      } else if (RB < 0.75){
+        fill(random(255), random(150), random(150), this.lifetime);
+      } else if (RB <= 1) {
+        fill(random(255), random(150), random(150), this.lifetime);
+        this.r = 2;
+      }
 }
